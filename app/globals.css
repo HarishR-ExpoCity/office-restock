@@ -131,3 +131,18 @@
     animation: none;
   }
 }
+
+/* Poster: keep the dark brand background when printing. */
+.poster-print {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+@media print {
+  @page {
+    margin: 12mm;
+  }
+  html,
+  body {
+    background: #000000 !important;
+  }
+}
